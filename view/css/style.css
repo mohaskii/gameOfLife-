@@ -1,29 +1,35 @@
 .gamecontainer {
     display: flex;
     /* flex-direction: row; */
-    align-items: start;
-
+    align-items: center;
+    justify-content: center;
     margin: 0;
     height: fit-content;
     /* overflow: hidden; */
 
     grid-area: gamecontainer;
+    gap: 300px;
 
 }
 body{
     margin: 0;
     display: grid;
-    grid-template-columns: 30% 70%;
-    grid-template-areas: "title gamecontainer ";
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 60 40%;
+    grid-template-areas: "title"
+    "gamecontainer"
+    "footer";
     width: 100%;
     background-color: rgb(205, 210, 224);
-    height: fit-content;
+    /* height: fit-content; */
 }
 canvas {
-    /* margin-top: 10px; */
+    margin-top: 30px;
     cursor: pointer;
     border-radius: 5px;
+    overflow-y: auto;
 }
+
 
 .controlsContainer {
     /* text-align: center; */
@@ -43,6 +49,7 @@ i {
     font-size: 2em;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
 .title {
     display: flex;
@@ -58,7 +65,7 @@ i {
 .area{
     display: flex;
     flex-direction: column;
-
+    height: fit-content;
 }
 .title > :nth-child(1){
     display: flex;
@@ -108,26 +115,30 @@ h1{
 
     padding: 1.1rem;
 }
-p{
-    padding: 10px;
-}
+
 .c{
     color:  rgb(8, 24, 70);;
 }
 .title > :nth-child(4){
     align-self: self-end;
 }
+
 @media screen and (max-width: 1350px) {
     body {
         margin: 0;
-        display: flex;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 10% 60 40%;
+        grid-template-areas: "title"
+        "gamecontainer"
+        "footer";
         justify-content: center;
         align-items: center; 
         background-color: rgb(205, 210, 224);
 
     }
     .title{
-        display: none;
+        grid-area: title;
     }
     .gamecontainer {
         /* padding: em; */
@@ -149,16 +160,51 @@ p{
         font-size: 2em;
     }
     .controlsContainer {
-        padding: 0px;
+        
         display: flex ;
         width: 300px !important;
         bottom: 0px;
         
     }
+    p{
+        display: none;
+    }
+    canvas{
+        margin-bottom: 20px;
+    }
+    body> :nth-child(3){
+        padding-top: 20px;
+    }
   }
   @media screen and (max-width: 600px){
     .gamecontainer {
-        margin-top: 50%;
+        margin-top: 1%;
         
     }
+    h1{
+        font-size: 2em;
+    }
+  }
+  body> :nth-child(3) {
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
+  }
+  p{
+    font-family: 'Agbalumo', sans-serif;
+    margin: 0px;
+  }
+  .area > :nth-child(3){
+    background-color: rgba(75, 109, 209, 0.473);
+    width: fit-content;
+    position: relative;
+    bottom: 700px;
+    align-self: flex-end;
+    justify-content: center;
+    border-radius: 5px;
+
+
+  }
+  .lolo{
+    padding: 0px;
   }

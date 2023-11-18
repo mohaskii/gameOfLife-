@@ -21,8 +21,13 @@ let grid = Array.from({ length: gridSize }, () =>
 // Function to resize the canvas
 let resizeCanvas = () => {
     let min = window.innerHeight < window.innerWidth ? window.innerHeight : window.innerWidth;
-    canvas.width = min - 70;
-    canvas.height = min - 70;
+    if (min < 600){
+        canvas.width = min - 30;
+        canvas.height = min - 30;
+        return
+    }
+    canvas.width = min - 300;
+    canvas.height = min - 300;
 };
 
 
@@ -51,7 +56,7 @@ let drawGrid = () => {
             ctx.arcTo(x, y, x + borderRadius, y, borderRadius);
             ctx.fillStyle = grid[i][j] ? 'rgb(8, 15, 36)' : 'white';
             ctx.fill(); 
-            ctx.stroke();
+            // ctx.stroke();
         }
     }
 }
@@ -108,7 +113,8 @@ let refresh= () => {
     grid = Array.from({ length: defaultGridSize }, () =>
     Array.from({ length: defaultGridSize }, () => false)
     );
-    updateInfos()
+    updateInfos
+
     isPlaying= false
     clearInterval(intervalId)
     runNode.classList.remove("fa-circle-pause");
