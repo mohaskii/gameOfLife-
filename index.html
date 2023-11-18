@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/view/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Agbalumo:wght@400;700&display=swap">
+    <title>Game of Life</title>
+</head>
+
+<body>
+    <div class="gamecontainer">
+        <div class="area">
+            <canvas id="gameCanvas" width="1500" height="1500">
+
+            </canvas>
+            <div class="controlsContainer ">
+                <div style="padding: 20px;display: flex;gap: 30px;">
+                    <i class="fa-solid fa-play" id="run"></i>
+                    <i class="fa-solid fa-rotate" id="refresh"></i>
+                    <i class="fa-solid fa-magnifying-glass-plus" id="zoomIn"></i>
+                    <i class="fa-solid fa-magnifying-glass-minus" id="zoomOut"></i>
+                    <i class="fa-solid fa-shuffle" id="shuffle"></i>
+                </div>
+            </div>
+        </div>
+
+        <div>
+
+            <div>
+                <p id="iteration">iteration : 0 </p>
+                <p id = "population">population : 0</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="title">
+        <div>   
+            <h1>Game Of life </h1>
+        </div>
+        <p>"La vie, telle une partie de jeu complexe, se déroule entre les intrications du hasard et la symphonie des
+            choix délibérés. Chaque moment est une cellule dans le tableau infini de possibilités, où l'incertitude se
+            mêle à la complexité"</p>
+        <P>Sir ChatGPT - jeudi 17 novembre Keur Massar </P>
+        <div>
+            <a href="https://github.com/mohaskii">
+                <i  class="fa-brands fa-github c"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/mouhamed-sarr-17366925b/">
+                <i class="fa-brands fa-linkedin c"></i>
+            </a>
+        </div>
+    </div>
+
+    <script type="module" src="/view/js/main.js"></script>
+
+</body>
+
+</html>
