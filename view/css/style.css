@@ -168,6 +168,7 @@ h1{
     }
     p{
         display: none;
+
     }
     canvas{
         margin-bottom: 20px;
@@ -193,12 +194,13 @@ h1{
   p{
     font-family: 'Agbalumo', sans-serif;
     margin: 0px;
+    color:  rgb(8, 24, 70);;    
   }
   .area > :nth-child(3){
     background-color: rgba(75, 109, 209, 0.473);
     width: fit-content;
     position: relative;
-    bottom: 550px;
+    bottom: 500px;
     align-self: flex-end;
     justify-content: center;
     border-radius: 5px;
