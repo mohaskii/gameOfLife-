@@ -6,7 +6,7 @@ This implementation of Conway's Game of Life is a simple and lightweight version
 
 1. **Access via Browser:**
    - Alternatively, you can access the game by navigating to the following link in your browser:
-     - [https://heroic-syrniki-3e287b.netlify.app/](https://heroic-syrniki-3e287b.netlify.app/)
+     - [https://dainty-dolphin-25b813.netlify.app](https://dainty-dolphin-25b813.netlify.app)
 2. **Clone the Repository:**
    `https://github.com/mohaskii/gameOfLife-.git`
 
